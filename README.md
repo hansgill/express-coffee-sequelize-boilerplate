@@ -1,7 +1,7 @@
 
-##express-coffee-mongo-boilerplate by Hans Gill
+##express-coffee-sequelize-boilerplate by Hans Gill
 
-ExpressJS CoffeeScript Mongodb Boilerplate code. This repo lets you get up and running in no time and focus on building a node based app using coffeescript, mongo and expressJS
+ExpressJS CoffeeScript Sequelize Boilerplate code. This repo lets you get up and running in no time and focus on building a node based app using coffeescript, RDBMS and expressJS
 
 ##Configuration
 
@@ -17,7 +17,16 @@ At the minimum make changes to the following two properties in config.json or {e
 
 2) "port" : {port you want the server to run on}*
 
-* Make sure the mongo property is pointing to the correct server*
+Make changes to the database connection settings in config.json or {environment}-conf.json (environment is recommended)
+
+    "database" : {
+        "host" : "localhost",
+        "name" : "boilerplate",
+        "user" : "boilerplate",
+        "password" : "boilerplate",
+        "dialect" : "mysql",
+        "port"  : 3306
+    }
 
 
 ##Starting the server
