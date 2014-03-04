@@ -9,7 +9,7 @@ cons        = require("consolidate")
 SessionStore = require('express-mysql-session')
 db          = require "../shared/models/"
 
-#get the connection to the db
+#create the connection to the database
 db.connect()
 
 app.configure () ->
