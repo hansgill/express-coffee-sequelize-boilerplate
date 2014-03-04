@@ -1,0 +1,32 @@
+{
+  "app_id" : "boilerplate",
+
+  "port" : 5001,
+
+  "log_path" : "/var/log",
+
+  "database" : {
+    "host" : "localhost",
+    "name" : "boilerplate",
+    "user" : "<username>",
+    "password" : "<password>",
+    "dialect" : "mysql",
+    "port"  : 3306
+  },
+  
+  "static_assets" : {
+    "base": "static.hsgill",
+    "url": "https://s3.amazonaws.com/boilerplate"
+  },
+
+  "context" : "",
+
+  "base_url" : "boilerplate.localhost",
+
+  "email":{
+    "from" : "app <info@app.com>"
+  },
+
+  "title" : "boilerplate",
+  "info-email" : "info@app.com"
+}
