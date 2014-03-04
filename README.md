@@ -28,6 +28,8 @@ Make changes to the database connection settings in config.json or {environment}
         "port"  : 3306
     }
 
+Different RDMBS are supported by Sequelize. To learn more visit the following link http://sequelizejs.com/docs/latest/usage#dialects
+
 
 ##Starting the server
 
