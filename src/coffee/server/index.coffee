@@ -7,15 +7,17 @@ app         = express()
 server      = require('http').createServer app
 cons        = require("consolidate")
 SessionStore = require('express-mysql-session')
-models      = require "../shared/models"
+db          = require "../shared/models/"
 
+#get the connection to the db
+db.connect()
 
 app.configure () ->
   app.engine '.html', cons.ejs
   app.engine '.json', cons.ejs
   app.set 'views', __dirname + '/views'
   app.set 'view engine', 'html'
-  app.set 'models', models
+  app.set 'models', db.models()
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use express.static __dirname + '/public'
@@ -43,6 +45,7 @@ app.get("models").sequelize.sync({force:false}).complete (err)->
   else
     console.log "model tables created!"
     #lets just do test to make sure we can add user and company to the db
+    console.dir app.get('models')
     app.get('models').Company.create
       name : "SimplyMatchMe"
       domain : "Simplymatchme.com"
@@ -57,6 +60,7 @@ app.get("models").sequelize.sync({force:false}).complete (err)->
         user.addCompany smm
         .success ()->
           console.dir "company added for #{user.full_name}"
+          app.get('models').User.addUser()
 
 
 

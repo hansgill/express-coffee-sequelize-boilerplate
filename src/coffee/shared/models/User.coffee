@@ -10,7 +10,9 @@ module.exports = (sequelize, cb)->
   ,
   classMethods:
     addUser : ()->
+      {Company}     = (require "./").models()
       console.dir "do the work for adding a user here"
+      Company.getListOfCompanies()
 
   instanceMethods:
     getBasicProfile : ()->
