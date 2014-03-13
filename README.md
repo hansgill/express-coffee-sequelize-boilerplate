@@ -67,6 +67,34 @@ Different RDMBS are supported by Sequelize. To learn more visit the following li
 
   This will load properties from config.json followed by production-conf.json. *Any properties with similar names in {environment}-config.json will take precedence over config.json*
 
+## Enable Basic Auth
+
+Go to {env}-conf.json file and set the following flag
+    
+    "enableBasicAuth" : true
+
+By enabling basic auth, the server sets up the route below. The post expect username / password as basic authentication headers.
+    
+    POST /auth/login
+
+Response can be whatever you want it to be. If you are looking to build RESTfull API, I suggest you lookup the user and send back the token associated with the user. Also make sure you enable the protection of API's (next section).
+
+## Enable Protection of API's
+
+Go to {env}-conf.json file and set the following flag
+    
+    "protectAPI" : true
+
+Once enabled, all the /api/* routes expect to get the header below in the request. Token can be the value you sent the user during successful POST to /auth/login
+    
+    Authentication : Bearer <token>
+
+## Force DB table recreation by Sequelize
+
+Go to {env}-conf.json file and set the following flag
+    
+    "forceTableCreation" : true
+
 
 ## License 
 
