@@ -1,17 +1,17 @@
 {
-  "name": "simplyMatchME",
+  "name": "boilerplate",
   "version": "0.0.1",
   "private": true,
-  "description": "simplyMatchME",
+  "description": "boilerplate",
   "keywords": [
-    "simplyMatchME"
+    "boilerplate"
   ],
-  "author": "Hans Gill <hans@simplymatchme.com>",
+  "author": "Hans Gill <hansgill@gmail.com>",
   "main": "index",
   "contributors": [
     {
       "name": "Hans Gill",
-      "email": "hans@simplymatchme.com"
+      "email": "hansgill@gmail.com"
     }
   ],
   "scripts": {
@@ -37,7 +37,10 @@
     "consolidate": "*",
     "mysql" : "*",
     "sequelize": "^1.7.0",
-    "express-mysql-session": "0.0.7"
+    "express-mysql-session": "0.0.7",
+    "passport" : "*",
+    "passport-http-bearer": "*",
+    "coffee-script" : "*"
   },
   "devDependencies": {
     "coffee-script": ">=1.3",

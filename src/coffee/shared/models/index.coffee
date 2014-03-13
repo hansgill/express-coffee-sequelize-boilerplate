@@ -19,7 +19,7 @@ module.exports = {
   connect: ()->
     if not sequelize
       console.dir "lets create the sequelize connection"
-      sequelize = new Sequelize conf.get("database:name"), conf.get("database:user"), conf.get("database:password"),
+      sequelize = new Sequelize conf.get("database:database"), conf.get("database:user"), conf.get("database:password"),
         dialect: conf.get("database:dialect")
         port:    conf.get("database:port")
     console.dir "already have a connection"

@@ -7,9 +7,9 @@
 
   "database" : {
     "host" : "localhost",
-    "name" : "boilerplate",
-    "user" : "boilerplate",
-    "password" : "boilerplate",
+    "database" : "shiva",
+    "user" : "shivawebapp",
+    "password" : "shivawebapp",
     "dialect" : "mysql",
     "port"  : 3306
   },
@@ -28,5 +28,9 @@
   },
 
   "title" : "boilerplate",
-  "info-email" : "info@app.com"
+  "info-email" : "info@app.com",
+
+  "enableBasicAuth" : true,
+  "protectAPI" : true,
+  "forceTableCreation" : true
 }

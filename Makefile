@@ -1,4 +1,4 @@
-PROJECT = boilerplate
+PROJECT = shiva
 PROJECT_DIR = $(shell pwd)
 
 TESTTIMEOUT = 5000
@@ -33,7 +33,7 @@ CSS_SRC = src/static/css
 CSS_BUILD = lib/server/public/css
 CSS_FINAL = $(CSS_BUILD)/$(PROJECT).css
 CSS_FINAL_MIN = $(CSS_BUILD)/$(PROJECT).min.css
-CSS_TARGETS =	boilerplate.css
+CSS_TARGETS =	shiva.css
 
 #any ajax code can be added as separate coffee files in here.
 COFFEE_UI_SRC = src/coffee/browser
@@ -54,7 +54,7 @@ COFFEE_UI_TARGETS =	 `find $(COFFEE_UI_SRC) -name \*.coffee | sort`
 										
 install:
 	npm install
-	bower install
+	bower -allow-root install
 
 version:
 	@echo $(VERSION)
